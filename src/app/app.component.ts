@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
+  selector: 'sem-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'sem-client';
+  title = 'Sanujaya Enterprise Management';
 }
