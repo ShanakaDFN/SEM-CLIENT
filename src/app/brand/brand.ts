@@ -1,7 +1,7 @@
 import { Status } from './../enum/status';
 
 export class Brand{
-    id! : number;
+    // id! : number;
     name! : string;
-    status! : Status;
+    status! : string;
 }

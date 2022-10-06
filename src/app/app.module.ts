@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -8,17 +10,25 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrandComponent } from './brand/brand.component';
 import { ModelComponent } from './model/model.component';
 
+import { NgMaterialModule } from './ng-material/ng-material.module';
+import { BrandAddComponent } from './brand/brand-add/brand-add.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     ProductComponent,
     BrandComponent,
-    ModelComponent
+    ModelComponent,
+    BrandAddComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
+    NgMaterialModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
