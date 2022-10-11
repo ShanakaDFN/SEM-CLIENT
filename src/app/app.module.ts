@@ -12,6 +12,9 @@ import { ModelComponent } from './model/model.component';
 
 import { NgMaterialModule } from './ng-material/ng-material.module';
 import { BrandAddComponent } from './brand/brand-add/brand-add.component';
+import { ModelAddComponent } from './model/model-add/model-add.component';
+import { ProductAddComponent } from './product/product-add/product-add.component';
+import { BrandService } from './brand/brand.service';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,9 @@ import { BrandAddComponent } from './brand/brand-add/brand-add.component';
     ProductComponent,
     BrandComponent,
     ModelComponent,
-    BrandAddComponent
+    BrandAddComponent,
+    ModelAddComponent,
+    ProductAddComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +35,7 @@ import { BrandAddComponent } from './brand/brand-add/brand-add.component';
     ReactiveFormsModule,
     NgMaterialModule,
   ],
-  providers: [],
+  providers: [BrandService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

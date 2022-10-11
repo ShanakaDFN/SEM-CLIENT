@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Product } from './product';
+
 
 @Component({
   selector: 'sem-product',
@@ -12,5 +12,4 @@ export class ProductComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
 }

@@ -1,21 +1,21 @@
-{{brand | json}}
+{{brandForm.value | json}}
 
 <div class="alert alert-success">
     {{successMessage}}
 </div>
 
 <div class="container">
-    <form (ngSubmit)="addBrand()">
+     <form  (ngSubmit)="addBrand(brand)" [formGroup]="brandForm">
         <div class="form-group">
             <mat-form-field appearance="standard">
                 <mat-label>Brand Name</mat-label>
-                <input matInput name="name" placeholder="Brand Name" [(ngModel)]="brand.name">
+                <input matInput name="name" placeholder="Brand Name" [(ngModel)]="brand.name" formControlName="name">
             </mat-form-field>
         </div>
         <div class="form-group">
             <mat-form-field appearance="fill">
                 <mat-label>Status</mat-label>
-                <mat-select [(ngModel)]="brand.status" name="status">
+                <mat-select name="status" [(ngModel)]="brand.status" formControlName="status">
                     <mat-option *ngFor="let status of statusList" [value]="status">
                         {{status}}
                     </mat-option>
@@ -23,7 +23,7 @@
             </mat-form-field>
         </div>
         <div class="form-group">
-            <button mat-raised-button color="primary">Save</button>
+            <button mat-raised-button color="primary" [disabled]="!brandForm.valid">Save</button>  <!--[disabled]="!brandForm.valid"-->
         </div>
     </form>
 </div>

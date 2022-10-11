@@ -1,0 +1,132 @@
+{{product | json}}
+
+<div class="alert alert-success">
+    {{successMessage}}
+</div>
+
+  <mat-grid-list cols="2" rowHeight="100">
+    <form (ngSubmit)="addProduct()">
+        <mat-grid-tile>
+            <mat-form-field class="field-width" appearance="standard">
+                <mat-label>Product Name</mat-label>
+                <input matInput name="name" placeholder="Product Name" [(ngModel)]="product.name">
+            </mat-form-field>
+        </mat-grid-tile>
+
+        <mat-divider></mat-divider>
+
+        <mat-grid-tile>
+            <mat-form-field class="field-width" appearance="standard">
+                <mat-label>Tag Name</mat-label>
+                <input matInput name="tagName" placeholder="Tag Name" [(ngModel)]="product.tagName">
+            </mat-form-field>
+        </mat-grid-tile>
+
+        <mat-divider></mat-divider>
+
+        <mat-grid-tile>
+            <mat-form-field class="field-width" appearance="standard">
+                <mat-label>OEM</mat-label>
+                <input matInput name="oem" placeholder="OEM" [(ngModel)]="product.oem">
+            </mat-form-field>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+            <mat-form-field class="field-width" appearance="standard">
+                <mat-label>HS Code</mat-label>
+                <input matInput name="hsCode" placeholder="HS Code" [(ngModel)]="product.hsCode">
+            </mat-form-field>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+            <mat-form-field class="field-width" appearance="standard">
+                <mat-label>Volume</mat-label>
+                <input matInput name="volume" placeholder="Volume" [(ngModel)]="product.volume">
+            </mat-form-field>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+            <mat-form-field class="field-width" appearance="standard">
+                <mat-label>Weight</mat-label>
+                <input matInput name="weight" placeholder="Weight" [(ngModel)]="product.weight">
+            </mat-form-field>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+            <mat-form-field class="field-width" appearance="fill">
+                <mat-label>Brand</mat-label>
+                <mat-select [(ngModel)]="product.brand" name="brand">
+                    <mat-option *ngFor="let brand of brandList" [value]="brand">
+                        {{brand.name}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+            <mat-form-field class="field-width" appearance="fill">
+                <mat-label>Model</mat-label>
+                <mat-select [(ngModel)]="product.model" name="model">
+                    <mat-option *ngFor="let model of modelList" [value]="model">
+                        {{model.name}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+            <mat-form-field class="field-width" appearance="standard">
+                <mat-label>Wholesale Profit Markup</mat-label>
+                <input matInput name="wholesaleProfitMarkup" placeholder="Wholesale Profit Markup" [(ngModel)]="product.wholesaleProfitMarkup">
+            </mat-form-field>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+            <mat-form-field class="field-width" appearance="standard">
+                <mat-label>Retail Profit Markup</mat-label>
+                <input matInput name="retailProfitMarkup" placeholder="Retail Profit Markup" [(ngModel)]="product.retailProfitMarkup">
+            </mat-form-field>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+            <mat-form-field class="field-width" appearance="standard">
+                <mat-label>Sale Percentage</mat-label>
+                <input matInput name="salePercentage" placeholder="Sale Percentage" [(ngModel)]="product.salePercentage">
+            </mat-form-field>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+            <mat-form-field class="field-width" appearance="standard">
+                <mat-label>Warranty Profit Markup</mat-label>
+                <input matInput name="warrantyProfitMarkup" placeholder="Warranty Profit Markup" [(ngModel)]="product.warrantyProfitMarkup">
+            </mat-form-field>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+            <mat-form-field class="field-width" appearance="standard">
+                <mat-label>Minimum Profit Markup</mat-label>
+                <input matInput name="minimumProfitMarkup" placeholder="Minimum Profit Markup" [(ngModel)]="product.minimumProfitMarkup">
+            </mat-form-field>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+            <mat-form-field class="field-width" appearance="fill">
+                <mat-label>Status</mat-label>
+                <mat-select [(ngModel)]="product.status" name="status">
+                    <mat-option *ngFor="let status of statusList" [value]="status">
+                        {{status}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+            
+        </mat-grid-tile>
+        
+        <mat-grid-tile>
+            <button mat-raised-button color="primary">Save</button>
+        </mat-grid-tile>
+    </form>
+</mat-grid-list>
+

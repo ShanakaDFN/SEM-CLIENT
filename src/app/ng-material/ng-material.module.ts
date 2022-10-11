@@ -10,6 +10,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatSelectModule } from '@angular/material/select';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatButtonModule } from '@angular/material/button';
+import { MatDividerModule } from '@angular/material/divider';
+import {MatGridListModule} from '@angular/material/grid-list';
 
 
 @NgModule({
@@ -26,6 +28,8 @@ import { MatButtonModule } from '@angular/material/button';
     MatSelectModule,
     MatRadioModule,
     MatButtonModule,
+    MatDividerModule,
+    MatGridListModule
   ],
   exports: [
     CommonModule,
@@ -38,7 +42,9 @@ import { MatButtonModule } from '@angular/material/button';
     MatIconModule,
     MatSelectModule,
     MatRadioModule,
-    MatButtonModule
+    MatButtonModule,
+    MatDividerModule,
+    MatGridListModule
 ]
 })
 export class NgMaterialModule { }
