@@ -1,0 +1,13 @@
+.table-width{
+    width: 100%;
+}
+
+th.mat-sort-header-sorted {
+    color: black;
+  }
+
+.filter-align{
+    padding: 10px;
+}
+  
+

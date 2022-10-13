@@ -32,7 +32,7 @@ export class BrandAddComponent implements OnInit {
       });
   }
 
-  public addBrand(brand : Brand) { //brandForm : any
+  public addBrand(brand : Brand) { 
      let response = this.brandService.addBrand(brand);
      response.subscribe((data)=>{
        return this.successMessage = data;
