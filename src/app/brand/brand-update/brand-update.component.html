@@ -1,0 +1,19 @@
+<div [formGroup]="brandForm">
+    <mat-form-field>
+        <input placeholder="{{action}} Name" matInput formControlName="name">
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-select name="status" formControlName="status">
+            <mat-option *ngFor="let status of statusList" [value]="status">
+                {{status}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <div mat-dialog-actions>
+        <button mat-button mat-raised-button color="primary" (click)="updateBrand()"
+            [disabled]="!brandForm.valid">Add</button>
+        <button mat-button (click)="closeDialog()" mat-flat-button color="warn">Cancel</button>
+    </div>
+</div>

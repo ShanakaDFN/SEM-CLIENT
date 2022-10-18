@@ -14,6 +14,7 @@ import { MatDividerModule } from '@angular/material/divider';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatTableExporterModule } from 'mat-table-exporter';
+import { MatDialogModule } from '@angular/material/dialog';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { MatTableExporterModule } from 'mat-table-exporter';
     MatDividerModule,
     MatGridListModule,
     MatPaginatorModule,
-    MatTableExporterModule
+    MatTableExporterModule,
+    MatDialogModule,
   ],
   exports: [
     CommonModule,
@@ -50,7 +52,8 @@ import { MatTableExporterModule } from 'mat-table-exporter';
     MatDividerModule,
     MatGridListModule,
     MatPaginatorModule,
-    MatTableExporterModule
+    MatTableExporterModule,
+    MatDialogModule,
 ]
 })
 export class NgMaterialModule { }

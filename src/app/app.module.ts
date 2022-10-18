@@ -15,6 +15,8 @@ import { BrandAddComponent } from './brand/brand-add/brand-add.component';
 import { ModelAddComponent } from './model/model-add/model-add.component';
 import { ProductAddComponent } from './product/product-add/product-add.component';
 import { BrandService } from './brand/brand.service';
+import { BrandDialogComponent } from './brand/brand-dialog/brand-dialog.component';
+import { BrandUpdateComponent } from './brand/brand-update/brand-update.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { BrandService } from './brand/brand.service';
     ModelComponent,
     BrandAddComponent,
     ModelAddComponent,
-    ProductAddComponent
+    ProductAddComponent,
+    BrandDialogComponent,
+    BrandUpdateComponent
   ],
   imports: [
     BrowserModule,

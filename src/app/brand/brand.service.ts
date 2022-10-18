@@ -12,9 +12,17 @@ export class BrandService {
 
   //baseUrl : string = "http://localhost:8082/brand/";
 
+  brand: Brand = {
+    id : 0 ,
+    name: '',
+    status: ''
+  }
+
   constructor(private http : HttpClient) { }
 
-  public addBrand(brand: Brand) : Observable<any>{
+  public addBrand(brand : Brand) : Observable<any>{
+    //this.brand.name = data.value.name;
+    //this.brand.status = data.value.status
     return this.http.post(baseUrl+"add", brand, {responseType : 'text' as'json'});
   }
 

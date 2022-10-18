@@ -1,29 +1,29 @@
-{{brandForm.value | json}}
+<!-- {{brandForm.value | json}}
 
 <div class="alert alert-success">
     {{successMessage}}
-</div>
+</div> -->
 
-<div class="container">
-     <form  (ngSubmit)="addBrand(brand)" [formGroup]="brandForm">
-        <div class="form-group">
-            <mat-form-field appearance="standard">
-                <mat-label>Brand Name</mat-label>
-                <input matInput name="name" placeholder="Brand Name" [(ngModel)]="brand.name" formControlName="name">
-            </mat-form-field>
-        </div>
-        <div class="form-group">
-            <mat-form-field appearance="fill">
-                <mat-label>Status</mat-label>
-                <mat-select name="status" [(ngModel)]="brand.status" formControlName="status">
-                    <mat-option *ngFor="let status of statusList" [value]="status">
-                        {{status}}
-                    </mat-option>
-                </mat-select>
-            </mat-form-field>
-        </div>
-        <div class="form-group">
-            <button mat-raised-button color="primary" [disabled]="!brandForm.valid">Save</button>  <!--[disabled]="!brandForm.valid"-->
-        </div>
-    </form>
+
+<div [formGroup]="brandForm">
+
+    <mat-form-field appearance="standard">
+        <mat-label>Brand Name</mat-label>
+        <input matInput placeholder="Brand Name" formControlName="name">
+    </mat-form-field>
+
+    <mat-form-field appearance="standard">
+        <mat-label>Status</mat-label>
+        <mat-select formControlName="status">
+            <mat-option *ngFor="let status of statusList" [value]="status">
+                {{status}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <div mat-dialog-actions>
+        <button mat-button mat-raised-button color="primary" (click)="addBrand()"
+            [disabled]="!brandForm.valid">Add</button>
+        <button mat-button (click)="closeDialog()" mat-flat-button color="warn">Cancel</button>
+    </div>
 </div>

@@ -1,0 +1,18 @@
+<h1 mat-dialog-title>Row Action :: <strong>{{action}}</strong></h1>
+
+<div mat-dialog-content *ngIf="action == 'Add'">
+  <sem-brand-add (setBrandForm)="setValue()"></sem-brand-add>
+</div>
+
+<div mat-dialog-content *ngIf="action == 'Update';" >
+  <sem-brand-update [action]="action" [local_data]="local_data"></sem-brand-update>
+</div>
+
+<div mat-dialog-content *ngIf="action == 'Delete'">
+  Sure to delete <b>{{local_data.name}}</b>?
+  <div mat-dialog-actions>
+    <button mat-button mat-raised-button color="primary" (click)="deleteBrand()"
+        >Delete</button>
+    <button mat-button (click)="closeDialog()" mat-flat-button color="warn">Cancel</button>
+</div>
+</div>
